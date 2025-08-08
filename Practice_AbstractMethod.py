@@ -14,26 +14,26 @@ class FoodItem(ABC):
 # Subclasses for Food Items
 class Pizza(FoodItem):
     def prepare(self):
-        print("Preparing pizza dough, adding sauce and cheese.")
+        print("Prepared pizza")
 
     def serve(self):
-        print("Serving the pizza in a box.")
+        print("Serving the pizza")
 
 
 class Burger(FoodItem):
     def prepare(self):
-        print("Grilling burger patty and adding toppings.")
+        print("Prepared burger")
 
     def serve(self):
-        print("Serving the burger in a wrapper.")
+        print("Serving the burger")
 
 
 class Pasta(FoodItem):
     def prepare(self):
-        print("Boiling pasta and adding sauce.")
+        print("Prepared pasta")
 
     def serve(self):
-        print("Serving the pasta on a plate.")
+        print("Serving the pasta")
 
 
 # Abstract class for Payment
@@ -46,16 +46,16 @@ class Payment(ABC):
 # Subclasses for Payment Methods
 class CardPayment(Payment):
     def pay(self, amount):
-        print(f"Processing card payment of Rs{amount}.")
+        print(f"Processing card payment of Rs {amount}.")
 
 
 class CashPayment(Payment):
     def pay(self, amount):
-        print(f"Accepting cash payment of Rs{amount}.")
+        print(f"Accepting cash payment of Rs {amount}.")
 
 
 # Main Program
-def Practice_AbstractionMethod():
+def main():
     print("Select a food item:")
     print("1. Pizza")
     print("2. Burger")
@@ -101,5 +101,24 @@ def Practice_AbstractionMethod():
 
 
 # Run the program
-if __name__ == "__Practice_AbstractionMethod__":
-    Practice_AbstractionMethod()
+if __name__ == "__main__":
+    main()
+"""
+Output:
+
+Select a food item:
+1. Pizza
+2. Burger
+3. Pasta
+Enter choice (1-3): 1
+Prepared pizza
+Serving the pizza
+
+Select payment method:
+1. Card
+2. Cash
+Enter choice (1-2): 2
+Accepting cash payment of Rs 1200.
+
+Process finished with exit code 0
+"""
